@@ -804,13 +804,16 @@ section {
     box-shadow: var(--shadow-accent-hover);
     z-index: 10001;
     animation: modalSlideIn 0.3s ease;
+    overflow: auto;
 }
 
 .certificate-modal-content img {
     width: 100%;
     height: auto;
+    max-height: 85vh;
     display: block;
     border-radius: var(--radius-md);
+    object-fit: contain;
 }
 
 /* ==========================================================================

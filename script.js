@@ -769,7 +769,7 @@ function initCertificateModal() {
     
     // Certificate image mapping
     const certificates = {
-        'matlab-certificate': 'matlab-certificate.jpg',
+        'matlab-certificate': 'Edge Course.jpg',
         'research-certificate': 'Certificate of Appreciation.png'
     };
     
