@@ -770,7 +770,7 @@ function initCertificateModal() {
     // Certificate image mapping
     const certificates = {
         'matlab-certificate': 'matlab-certificate.jpg',
-        'research-certificate': 'research-certificate.jpg'
+        'research-certificate': 'Certificate of Appreciation.png'
     };
     
     // Open certificate modal
