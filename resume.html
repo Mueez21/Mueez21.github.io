@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resume of Mueez Mejbah - Electronics & Telecommunication Engineering Student at CUET">
+    <meta name="author" content="Mueez Mejbah">
+    <title>Resume - Mueez Mejbah | ETE Student at CUET</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Load Font Awesome asynchronously for non-critical icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <style>
+        /* ==========================================================================
+           RESUME STYLES - PRINT OPTIMIZED
+           ========================================================================== */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Screen reader only text */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        /* Enhanced focus styles for accessibility */
+        *:focus {
+            outline: none;
+        }
+        
+        *:focus-visible {
+            outline: 3px solid #667eea;
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        
+        :root {
+            --primary-color: #00f0ff;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a4a4a;
+            --text-light: #6b7280;
+            --border-color: #e5e7eb;
+            --bg-light: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem;
+        }
+        
+        .page-actions {
+            max-width: 210mm;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        /* Resume Container */
+        .resume-container {
+            max-width: 210mm; /* A4 width */
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .resume-content {
+            padding: 30px 25px;
+        }
+        
+        /* Header */
+        .resume-header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .resume-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            margin-top: 0.75rem;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        
+        .contact-info i {
+            color: var(--primary-color);
+        }
+        
+        .contact-info a {
+            color: var(--text-medium);
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Sections */
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        /* Education */
+        .education-item,
+        .experience-item,
+        .project-item {
+            margin-bottom: 1.5rem;
+            page-break-inside: avoid;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+            flex-wrap: nowrap;
+            gap: 0.5rem;
+        }
+        
+        .item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+        }
+        
+        .item-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: auto;
+        }
+        
+        .item-subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-medium);
+            margin-bottom: 0.5rem;
+        }
+        
+        .item-details {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .item-details li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+        
+        .item-details li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .grade {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .skill-category {
+            margin-bottom: 0.75rem;
+        }
+        
+        .skill-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.4rem;
+        }
+        
+        .skill-category p {
+            color: var(--text-medium);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Awards */
+        .awards-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .awards-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-medium);
+        }
+        
+        .awards-list li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .page-actions {
+                display: none !important;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            .resume-content {
+                padding: 15mm 15mm;
+            }
+            
+            .resume-section {
+                page-break-inside: avoid;
+            }
+            
+            .education-item,
+            .experience-item,
+            .project-item {
+                page-break-inside: avoid;
+            }
+            
+            a {
+                text-decoration: none;
+                color: var(--text-medium);
+            }
+            
+            a[href^="http"]:after {
+                content: "";
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .resume-content {
+                padding: 30px 25px;
+            }
+            
+            .resume-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Action Buttons -->
+    <nav class="page-actions" role="navigation" aria-label="Page actions">
+        <a href="index.html" class="btn btn-secondary" aria-label="Go back to portfolio homepage">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Portfolio
+        </a>
+        <button onclick="window.print()" class="btn btn-primary" aria-label="Download or print this resume">
+            <i class="fas fa-download" aria-hidden="true"></i> Download / Print
+        </button>
+    </nav>
+
+    <!-- Resume Container -->
+    <main class="resume-container" role="main">
+        <div class="resume-content">
+            <!-- Header -->
+            <header class="resume-header">
+                <h1>MUEEZ MEJBAH</h1>
+                <div class="contact-info" role="list" aria-label="Contact information">
+                    <span role="listitem">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span class="sr-only">Location:</span>
+                        Agrabad, Chattogram
+                    </span>
+                    <span role="listitem">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span class="sr-only">Email:</span>
+                        <a href="mailto:mueezmejbah284@gmail.com">mueezmejbah284@gmail.com</a>
+                    </span>
+                    <span role="listitem">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <span class="sr-only">Phone:</span>
+                        <a href="tel:+8801974681797">+8801974681797</a>
+                    </span>
+                    <span role="listitem">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sr-only">LinkedIn:</span>
+                        <a href="https://www.linkedin.com/in/mueez-mejbah-214807306/" target="_blank" rel="noopener noreferrer">linkedin.com/in/mueez-mejbah-214807306</a>
+                    </span>
+                    <span role="listitem">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <span class="sr-only">GitHub:</span>
+                        <a href="https://github.com/Mueez21" target="_blank" rel="noopener noreferrer">github.com/Mueez21</a>
+                    </span>
+                </div>
+            </header>
+
+            <!-- Educational Qualification -->
+            <section class="resume-section" aria-labelledby="education-heading">
+                <h2 id="education-heading" class="section-title">Educational Qualification</h2>
+                
+                <article class="education-item">
+                    <h3 class="item-title">Chittagong University of Engineering and Technology</h3>
+                    <div class="item-header">
+                        <div class="item-subtitle">BSc in Electronics & Telecommunications</div>
+                        <time class="item-date" datetime="2023-01">Jan 2023 – Present</time>
+                    </div>
+                    <ul class="item-details">
+                        <li>Currently in 3rd year</li>
+                        <li>Technical Scholarship</li>
+                        <li>Expected Graduation: July 2027</li>
+                    </ul>
+                </article>
+
+                <article class="education-item">
+                    <h3 class="item-title">Chittagong College</h3>
+                    <div class="item-header">
+                        <div class="item-subtitle">Higher Secondary School Certificate (HSC)</div>
+                        <time class="item-date" datetime="2019-07">July 2019 – Dec 2021</time>
+                    </div>
+                    <ul class="item-details">
+                        <li>Grade: <span class="grade">5.00/5.00</span> (Science)</li>
+                    </ul>
+                </article>
+
+                <article class="education-item">
+                    <h3 class="item-title">Chittagong Collegiate School</h3>
+                    <div class="item-header">
+                        <div class="item-subtitle">Secondary School Certificate (SSC)</div>
+                        <time class="item-date" datetime="2007-01">Jan 2007 – Feb 2019</time>
+                    </div>
+                    <ul class="item-details">
+                        <li>Grade: <span class="grade">5.00/5.00</span> (Science)</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Project -->
+            <section class="resume-section">
+                <h2 class="section-title">Project</h2>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">NextFit – AI Fitness Trainer Web Application</div>
+                            <div class="item-subtitle">CSE-380 Internet Programming Project</div>
+                        </div>
+                    </div>
+                    <ul class="item-details">
+                        <li>Built a full-stack fitness and diet planner with real-time AI voice assistant.</li>
+                        <li>Integrated secure login (Clerk), cloud DB (Convex), and dynamic profile dashboard.</li>
+                        <li>Developed with Next.js, TypeScript, Tailwind CSS, and deployed on Vercel.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Work Experience -->
+            <section class="resume-section">
+                <h2 class="section-title">Work Experience</h2>
+                
+                <article class="experience-item">
+                    <h3 class="item-title">IEEE Antennas and Propagation Society, CUET Chapter</h3>
+                    <div class="item-header">
+                        <div class="item-subtitle">Vice Chair</div>
+                        <time class="item-date" datetime="2025-08">Aug 2025 – Present</time>
+                    </div>
+                    <ul class="item-details">
+                        <li>Led chapter activities and coordinated technical events.</li>
+                        <li>Assisted in planning workshops and seminars for members.</li>
+                        <li>Fostered collaboration among students and professionals.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-item">
+                    <h3 class="item-title">Udvash Coaching</h3>
+                    <div class="item-header">
+                        <div class="item-subtitle">Exam Copy Checker</div>
+                        <time class="item-date" datetime="2023-09">Sep 2023 – Dec 2023</time>
+                    </div>
+                    <ul class="item-details">
+                        <li>Evaluated exam sheets and provided feedback.</li>
+                        <li>Ensured fair marking and submitted results to coaching management.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Extracurricular Activities -->
+            <section class="resume-section">
+                <h2 class="section-title">Extracurricular Activities</h2>
+                
+                <article class="experience-item">
+                    <h3 class="item-title">Face the Case 4.0</h3>
+                    <div class="item-header">
+                        <div class="item-subtitle">Assistant Secretary of Promotion and Branding</div>
+                        <time class="item-date" datetime="2024-04">Apr 2024 – Jun 2024</time>
+                    </div>
+                    <ul class="item-details">
+                        <li>Supported event promotion and branding materials.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Awards & Achievements -->
+            <section class="resume-section">
+                <h2 class="section-title">Awards & Achievements</h2>
+                <ul class="awards-list">
+                    <li>Board Scholarship, SSC</li>
+                    <li>Champion in Regional Math Olympiad</li>
+                    <li>2nd runner up in Regional Biology Olympiad</li>
+                    <li>Champion in Instant Case Competition</li>
+                </ul>
+            </section>
+
+            <!-- Technical Skills -->
+            <section class="resume-section">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <p>C, C++, Python, MATLAB</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Machine Learning</h4>
+                        <p>Basics of Machine Learning</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Web Development</h4>
+                        <p>Website Design & Development</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Software</h4>
+                        <p>Microsoft Office</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Skills -->
+            <section class="resume-section">
+                <h2 class="section-title">Additional Skills</h2>
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <p>Bangla (Native), English (Proficient)</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Add keyboard shortcut for printing (Ctrl+P or Cmd+P)
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+
+        // Console message
+        console.log('%c📄 Resume of Mueez Mejbah', 'color: #667eea; font-size: 16px; font-weight: bold;');
+    </script>
+</body>
+</html>
