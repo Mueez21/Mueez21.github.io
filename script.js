@@ -1,4 +1,52 @@
 // ========================================
+// Theme Toggle Functionality
+// ========================================
+
+// Get theme from localStorage or default to 'dark'
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+console.log('Initial theme:', savedTheme);
+
+// Update theme icon based on current theme
+function updateThemeIcon() {
+    const themeToggleIcon = document.querySelector('.theme-toggle i');
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    if (themeToggleIcon) {
+        if (currentTheme === 'dark') {
+            themeToggleIcon.classList.remove('fa-moon');
+            themeToggleIcon.classList.add('fa-sun');
+        } else {
+            themeToggleIcon.classList.remove('fa-sun');
+            themeToggleIcon.classList.add('fa-moon');
+        }
+        console.log('Theme icon updated:', currentTheme);
+    } else {
+        console.log('Theme toggle icon not found');
+    }
+}
+
+// Initialize theme icon
+updateThemeIcon();
+
+// Theme toggle button event
+const themeToggleBtn = document.querySelector('.theme-toggle');
+console.log('Theme toggle button found:', themeToggleBtn);
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        console.log('Switching from', currentTheme, 'to', newTheme);
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon();
+    });
+}
+
+// ========================================
 // Certificate Modal Functionality
 // ========================================
 
@@ -53,15 +101,22 @@ document.addEventListener('keydown', (e) => {
 
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const sidebar = document.querySelector('.sidebar');
-const mainContent = document.querySelector('.main-content');
+const navbarNav = document.querySelector('.navbar-nav');
 
 if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
+    mobileMenuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        
+        // Toggle mobile menu
+        if (window.innerWidth <= 992) {
+            navbarNav.classList.toggle('active');
+        } else {
+            sidebar.classList.toggle('active');
+        }
         
         // Change icon
         const icon = mobileMenuToggle.querySelector('i');
-        if (sidebar.classList.contains('active')) {
+        if (navbarNav.classList.contains('active') || sidebar.classList.contains('active')) {
             icon.classList.remove('fa-bars');
             icon.classList.add('fa-times');
         } else {
@@ -71,13 +126,12 @@ if (mobileMenuToggle) {
     });
 }
 
-// Close sidebar when clicking outside on mobile
+// Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     if (window.innerWidth <= 992) {
-        if (!sidebar.contains(e.target) && 
-            !mobileMenuToggle.contains(e.target) && 
-            sidebar.classList.contains('active')) {
-            sidebar.classList.remove('active');
+        const navbar = document.querySelector('.top-navbar');
+        if (!navbar.contains(e.target) && navbarNav.classList.contains('active')) {
+            navbarNav.classList.remove('active');
             const icon = mobileMenuToggle.querySelector('i');
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
@@ -91,7 +145,7 @@ document.addEventListener('click', (e) => {
 
 function updateActiveNavOnScroll() {
     const sections = document.querySelectorAll('.section');
-    const navItems = document.querySelectorAll('.nav-item');
+    const navLinks = document.querySelectorAll('.nav-link');
     
     let currentSection = '';
     
@@ -105,11 +159,11 @@ function updateActiveNavOnScroll() {
         }
     });
     
-    navItems.forEach(item => {
-        item.classList.remove('active');
-        const href = item.getAttribute('href');
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
         if (href === `#${currentSection}`) {
-            item.classList.add('active');
+            link.classList.add('active');
         }
     });
 }
@@ -279,3 +333,28 @@ console.log('%c👋 Welcome to Mueez Mejbah\'s Portfolio!',
     'color: #2563eb; font-size: 20px; font-weight: bold;');
 console.log('%cInterested in the code? Check out my GitHub: https://github.com/Mueez21', 
     'color: #10b981; font-size: 14px;');
+
+// ========================================
+// Scroll to Top Button
+// ========================================
+
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+if (scrollToTopBtn) {
+    // Show/hide scroll to top button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
