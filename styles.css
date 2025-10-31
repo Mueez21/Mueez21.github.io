@@ -408,20 +408,6 @@ button {
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
-    width: 40px;
-    height: 40px;
-    background: var(--bg-tertiary);
-    border: none;
-    border-radius: 0.5rem;
-    color: var(--text-primary);
-    font-size: 1.25rem;
-    cursor: pointer;
-    transition: var(--transition-base);
-}
-
-.mobile-menu-toggle:hover {
-    background: var(--primary-color);
-    color: white;
 }
 
 /* ========================================
@@ -1704,6 +1690,8 @@ button {
         transform: translateX(-100%);
         transition: var(--transition-base);
         z-index: 1001;
+        width: 85vw;
+        max-width: 320px;
     }
     
     .sidebar.active {
@@ -1721,15 +1709,30 @@ button {
         display: none;
     }
     
-    /* Remove top padding since navbar is hidden */
+    /* Remove margins and ensure full width */
     .main-content {
         margin-left: 0;
         padding-top: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* All sections full width */
+    .section {
+        padding: 3rem 1rem;
+        width: 100%;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
     }
 
     /* Show mobile menu toggle button */
     .mobile-menu-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: fixed;
         top: 1rem;
         left: 1rem;
@@ -1739,11 +1742,16 @@ button {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border: none;
+        font-size: 1.25rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: var(--transition-base);
     }
 
     .mobile-menu-toggle:hover {
         background: var(--primary-dark);
+        transform: scale(1.05);
     }
     
     /* Theme toggle on mobile */
