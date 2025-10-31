@@ -101,6 +101,7 @@ document.addEventListener('keydown', (e) => {
 
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
 const sidebar = document.querySelector('.sidebar');
+const sidebarClose = document.querySelector('.sidebar-close');
 const navbarNav = document.querySelector('.navbar-nav');
 
 if (mobileMenuToggle) {
@@ -110,6 +111,7 @@ if (mobileMenuToggle) {
         // Toggle mobile menu
         if (window.innerWidth <= 992) {
             navbarNav.classList.toggle('active');
+            sidebar.classList.toggle('active');
         } else {
             sidebar.classList.toggle('active');
         }
@@ -120,6 +122,19 @@ if (mobileMenuToggle) {
             icon.classList.remove('fa-bars');
             icon.classList.add('fa-times');
         } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
+
+// Close sidebar with X button
+if (sidebarClose) {
+    sidebarClose.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        
+        const icon = mobileMenuToggle.querySelector('i');
+        if (icon) {
             icon.classList.remove('fa-times');
             icon.classList.add('fa-bars');
         }
