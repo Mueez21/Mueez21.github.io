@@ -1,36 +1,69 @@
-# Mueez Mejbah — Personal Portfolio
+# 🚀 Mueez Mejbah - Portfolio Website# Mueez Mejbah — Personal Portfolio
 
-A modern, professional personal portfolio website featuring a **Dark Mode Neon Theme** with cyan/teal/green accents. Built with vanilla HTML, CSS, and JavaScript to showcase projects, skills, education, research, and experience.
 
-![Portfolio Preview](https://via.placeholder.com/1200x600.png?text=Portfolio+Preview)
 
-## 🎨 Design Theme
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://mueez21.github.io)A modern, professional personal portfolio website featuring a **Dark Mode Neon Theme** with cyan/teal/green accents. Built with vanilla HTML, CSS, and JavaScript to showcase projects, skills, education, research, and experience.
 
-- **Dark Mode Neon**: Deep dark background (#07070a) with vibrant neon cyan, teal, and green accents
-- **Glass-morphism**: Semi-transparent cards with backdrop blur effects
-- **Smooth Animations**: Scroll-based reveal animations and hover effects
-- **Modern Typography**: Poppins font family for clean, professional look
+
+
+Modern, responsive portfolio showcasing projects, research, and experience in Electronics & Telecommunication Engineering at CUET.![Portfolio Preview](https://via.placeholder.com/1200x600.png?text=Portfolio+Preview)
+
+
+
+## ✨ Features## 🎨 Design Theme
+
+
+
+- 🌓 **Dark/Light Mode** - Toggle themes with persistent preference- **Dark Mode Neon**: Deep dark background (#07070a) with vibrant neon cyan, teal, and green accents
+
+- 📱 **Fully Responsive** - Optimized for mobile, tablet, desktop- **Glass-morphism**: Semi-transparent cards with backdrop blur effects
+
+- 🎨 **Modern UI/UX** - Clean design with smooth animations- **Smooth Animations**: Scroll-based reveal animations and hover effects
+
+- 🔝 **Scroll to Top** - Quick navigation button- **Modern Typography**: Poppins font family for clean, professional look
+
+- ⚡ **Single Page** - Smooth scrolling experience
 
 ## ✨ Features
 
+## 🛠️ Tech Stack
+
 ### � Single-Page Portfolio
-- **Hero Section**: Eye-catching introduction with animated neon text effects
+
+HTML5 • CSS3 • JavaScript • Font Awesome • Google Fonts- **Hero Section**: Eye-catching introduction with animated neon text effects
+
 - **About**: Personal background and career summary
-- **Education**: Academic timeline with institutions and achievements
+
+## 📂 Sections- **Education**: Academic timeline with institutions and achievements
+
 - **Skills**: Animated skill cards showcasing technical expertise
-- **Projects**: Portfolio with detailed modal popups for each project
+
+Home • About • Education & Skills • Projects • Research • Experience • Contact- **Projects**: Portfolio with detailed modal popups for each project
+
 - **Research**: Dedicated section for academic research and publications
-- **Experience**: Professional and volunteer work history
+
+## 📄 License- **Experience**: Professional and volunteer work history
+
 - **Contact**: Working contact form with validation and mailto integration
 
+© 2025 Mueez Mejbah. All rights reserved.
+
 ### 📋 Resume Page
-- Print-optimized resume layout (A4 size)
+
+## 📞 Contact- Print-optimized resume layout (A4 size)
+
 - "Download/Print" button (Ctrl+P shortcut)
-- All CV content included
+
+📧 mueezmejbah284@gmail.com | 🔗 [LinkedIn](https://linkedin.com/in/mueez-mejbah-214807306) | 💻 [GitHub](https://github.com/Mueez21)- All CV content included
+
 - Professional formatting
 
+---
+
 ### 🔲 Project Modals
-- Detailed project information with full descriptions
+
+⭐ Star this repo if you find it helpful!- Detailed project information with full descriptions
+
 - Technology stack with glowing tags
 - Live demo and source code links
 - Accessible with keyboard navigation and screen reader support
