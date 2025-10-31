@@ -6,8 +6,7 @@
 
 
 
-Modern, responsive portfolio showcasing projects, research, and experience in Electronics & Telecommunication Engineering at CUET.![Portfolio Preview](https://via.placeholder.com/1200x600.png?text=Portfolio+Preview)
-
+Modern, responsive portfolio showcasing projects, research, and experience in Electronics & Telecommunication Engineering at CUET.
 
 
 ## ✨ Features## 🎨 Design Theme
