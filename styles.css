@@ -159,6 +159,30 @@ button {
     flex-direction: column;
     gap: 2rem;
     width: 100%;
+    position: relative;
+}
+
+/* Sidebar Close Button (Mobile Only) */
+.sidebar-close {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+    z-index: 10;
+}
+
+.sidebar-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
 }
 
 /* Profile */
@@ -1679,10 +1703,17 @@ button {
     .sidebar {
         transform: translateX(-100%);
         transition: var(--transition-base);
+        z-index: 1001;
     }
     
     .sidebar.active {
         transform: translateX(0);
+    }
+
+    .sidebar-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     /* Top navbar takes full width on mobile */
