@@ -164,7 +164,7 @@ button {
 
 /* Sidebar Close Button (Mobile Only) */
 .sidebar-close {
-    display: none;
+    display: none !important; /* Force hide on desktop */
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -1699,7 +1699,7 @@ button {
     }
 
     .sidebar-close {
-        display: flex;
+        display: flex !important; /* Override desktop hide */
         align-items: center;
         justify-content: center;
     }
