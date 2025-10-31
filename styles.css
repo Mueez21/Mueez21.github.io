@@ -696,9 +696,10 @@ button {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* 4 columns - will wrap to 2 rows (4+4) */
     gap: 1.5rem;
     margin-top: 2rem;
+    max-width: 100%;
 }
 
 .skill-card {
