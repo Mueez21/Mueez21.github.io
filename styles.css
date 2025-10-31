@@ -1792,10 +1792,7 @@ button {
         font-size: 2rem;
     }
     
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
-        gap: 1.25rem;
-    }
+    /* Keep 4 columns on tablet/desktop - only change on mobile */
     
     .experience-grid {
         grid-template-columns: 1fr;
