@@ -407,7 +407,7 @@ button {
 
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
-    display: none;
+    display: none !important; /* Force hide on desktop */
 }
 
 /* ========================================
@@ -696,7 +696,7 @@ button {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -1730,7 +1730,7 @@ button {
 
     /* Show mobile menu toggle button */
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important; /* Override desktop hide */
         align-items: center;
         justify-content: center;
         position: fixed;
