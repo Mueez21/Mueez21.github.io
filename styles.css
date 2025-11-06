@@ -2,23 +2,23 @@
    CSS Variables
    ======================================== */
 :root {
-    /* Colors - Fresh Green Theme (Light Mode) */
+    /* Colors - Professional Green Theme (Light Mode) */
     --primary-color: #10b981;
     --primary-dark: #059669;
     --primary-light: #34d399;
-    --accent-color: #06b6d4;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
+    --accent-color: #0891b2;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
     --text-light: #94a3b8;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-tertiary: #f1f5f9;
+    --bg-primary: #f0fdf4;
+    --bg-secondary: #dcfce7;
+    --bg-tertiary: #bbf7d0;
     --card-bg: #ffffff;
-    --border-color: #e2e8f0;
+    --border-color: #d1fae5;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 4px 8px 0 rgba(0, 0, 0, 0.12);
+    --shadow-xl: 0 8px 16px 0 rgba(0, 0, 0, 0.15);
     
     /* Gradients */
     --hero-gradient: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
@@ -51,23 +51,23 @@
 
 /* Dark Mode Variables */
 [data-theme="dark"] {
-    /* Colors - Dark Mode */
+    /* Colors - Professional Dark Mode */
     --primary-color: #34d399;
     --primary-dark: #10b981;
     --primary-light: #6ee7b7;
-    --accent-color: #22d3ee;
+    --accent-color: #06b6d4;
     --text-primary: #f1f5f9;
     --text-secondary: #cbd5e1;
     --text-light: #94a3b8;
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
     --bg-tertiary: #334155;
-    --card-bg: #1f2937;
+    --card-bg: #1e293b;
     --border-color: #334155;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    --shadow-md: 0 2px 4px 0 rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 8px 16px 0 rgba(0, 0, 0, 0.45);
     
     /* Gradients - Dark Mode */
     --hero-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
@@ -420,12 +420,12 @@ button {
 }
 
 .section {
-    padding: 6rem 2rem;
-    min-height: auto;
+    padding: 4rem 2rem;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    margin-bottom: 8rem;
-    scroll-margin-top: calc(var(--navbar-height) + 20px);
+    margin-bottom: 0;
+    scroll-margin-top: calc(var(--navbar-height) + 10px);
 }
 
 .section-wrapper {
@@ -477,20 +477,16 @@ button {
    Hero Section
    ======================================== */
 .hero-section {
-    background: var(--hero-gradient);
+    background: var(--bg-primary);
     position: relative;
     overflow: hidden;
+    margin-bottom: 0;
+    min-height: 100vh;
+    padding: 4rem 2rem;
 }
 
 .hero-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, var(--overlay-medium) 0%, transparent 70%);
-    border-radius: 50%;
+    display: none;
 }
 
 .hero-content {
@@ -532,19 +528,12 @@ button {
    About Section
    ======================================== */
 #about {
-    background: var(--section-gradient-1);
+    background: var(--bg-secondary);
     position: relative;
 }
 
 #about::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 200px;
-    background: linear-gradient(to top, var(--overlay-light), transparent);
-    pointer-events: none;
+    display: none;
 }
 
 .about-content {
@@ -563,7 +552,7 @@ button {
    Education Section (Timeline)
    ======================================== */
 #education {
-    background: var(--section-gradient-2);
+    background: var(--bg-primary);
 }
 
 .timeline {
@@ -608,32 +597,23 @@ button {
 }
 
 .timeline-content {
-    background: var(--card-gradient);
+    background: var(--card-bg);
     padding: 1.75rem;
     border-radius: 0.75rem;
-    box-shadow: var(--shadow-md);
-    border-left: 4px solid transparent;
-    border-image: linear-gradient(180deg, var(--primary-color), var(--accent-color)) 1;
+    box-shadow: var(--shadow-sm);
+    border-left: 3px solid var(--primary-color);
     transition: var(--transition-base);
     position: relative;
     overflow: hidden;
 }
 
 .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle, var(--overlay-medium) 0%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(30%, -30%);
+    display: none;
 }
 
 .timeline-content:hover {
-    box-shadow: 0 8px 24px var(--overlay-strong);
-    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+    transform: translateX(6px);
 }
 
 .timeline-content h3 {
@@ -680,20 +660,12 @@ button {
    Skills Section
    ======================================== */
 #skills {
-    background: var(--section-gradient-1);
+    background: var(--bg-primary);
     position: relative;
 }
 
 #skills::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -200px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
+    display: none;
 }
 
 .skills-grid {
@@ -705,31 +677,23 @@ button {
 }
 
 .skill-card {
-    background: var(--card-gradient);
+    background: var(--card-bg);
     padding: 2rem 1.5rem;
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
     text-align: center;
     transition: var(--transition-base);
-    border: 2px solid transparent;
+    border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
 }
 
 .skill-card::after {
-    content: '';
-    position: absolute;
-    bottom: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, var(--overlay-light) 0%, transparent 70%);
-    transition: var(--transition-slow);
+    display: none;
 }
 
 .skill-card:hover::after {
-    bottom: -20%;
-    right: -20%;
+    display: none;
 }
 
 .skill-card::before {
@@ -738,7 +702,7 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    height: 3px;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     transform: scaleX(0);
     transition: var(--transition-base);
@@ -749,8 +713,8 @@ button {
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px var(--overlay-strong);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
     border-color: var(--primary-color);
 }
 
@@ -765,7 +729,7 @@ button {
     justify-content: center;
     color: white;
     font-size: 2rem;
-    box-shadow: 0 4px 12px var(--overlay-strong);
+    box-shadow: none;
 }
 
 .skill-card h3 {
@@ -785,20 +749,12 @@ button {
    Projects Section
    ======================================== */
 #projects {
-    background: var(--section-gradient-3);
+    background: var(--bg-primary);
     position: relative;
 }
 
 #projects::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: -100px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, var(--overlay-medium) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
+    display: none;
 }
 
 .projects-grid {
@@ -810,35 +766,27 @@ button {
 }
 
 .project-card {
-    background: var(--card-gradient);
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    background: var(--card-bg);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
     padding: 2.5rem;
     transition: var(--transition-base);
-    border: 2px solid transparent;
+    border: 1px solid var(--border-color);
     position: relative;
     overflow: hidden;
 }
 
 .project-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
-    transition: var(--transition-slow);
+    display: none;
 }
 
 .project-card:hover::before {
-    top: -30%;
-    right: -30%;
+    display: none;
 }
 
 .project-card:hover {
-    box-shadow: 0 12px 32px var(--overlay-strong);
-    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
     border-color: var(--primary-color);
 }
 
@@ -902,36 +850,28 @@ button {
    Research Section
    ======================================== */
 #research {
-    background: var(--section-gradient-2);
+    background: var(--bg-secondary);
 }
 
 .research-card {
-    background: var(--card-gradient);
-    border-radius: 1rem;
-    box-shadow: var(--shadow-md);
+    background: var(--card-bg);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-sm);
     padding: 2.5rem;
     margin-top: 2rem;
-    border-left: 5px solid transparent;
-    border-image: linear-gradient(180deg, var(--accent-color), var(--primary-color)) 1;
+    border-left: 4px solid var(--primary-color);
     transition: var(--transition-base);
     position: relative;
     overflow: hidden;
 }
 
 .research-card::before {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: -100px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
+    display: none;
 }
 
 .research-card:hover {
-    box-shadow: 0 12px 32px rgba(6, 182, 212, 0.2);
-    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
 }
 
 .research-header {
@@ -989,7 +929,7 @@ button {
    Experience Section
    ======================================== */
 #experience {
-    background: var(--section-gradient-1);
+    background: var(--bg-primary);
 }
 
 .experience-grid {
@@ -1000,37 +940,27 @@ button {
 }
 
 .experience-card {
-    background: var(--card-gradient);
+    background: var(--card-bg);
     border-radius: 0.75rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     padding: 2rem;
     transition: var(--transition-base);
-    border-top: 4px solid transparent;
-    border-image: linear-gradient(90deg, var(--primary-color), var(--accent-color)) 1;
-    border-image-slice: 1 0 0 0;
+    border-top: 3px solid var(--primary-color);
     position: relative;
     overflow: hidden;
 }
 
 .experience-card::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 150%;
-    height: 150%;
-    background: radial-gradient(circle, var(--overlay-light) 0%, transparent 70%);
-    transition: var(--transition-slow);
+    display: none;
 }
 
 .experience-card:hover::after {
-    top: -20%;
-    right: -20%;
+    display: none;
 }
 
 .experience-card:hover {
-    box-shadow: 0 8px 24px var(--overlay-strong);
-    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
 }
 
 .experience-header {
@@ -1097,15 +1027,7 @@ button {
 }
 
 #contact::before {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    right: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, var(--overlay-light) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
+    display: none;
 }
 
 .contact-section .container {
@@ -1199,17 +1121,17 @@ button {
     background: var(--primary-color);
     border-color: var(--primary-color);
     color: white;
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
 /* Right Side - Contact Form */
 .contact-form-side {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
-    border: 2px solid var(--primary-color);
-}   border-radius: 0.75rem;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
 }
 
 .contact-form-modern {
@@ -1246,7 +1168,7 @@ button {
     outline: none;
     border-color: var(--primary-color);
     background: var(--bg-primary);
-    box-shadow: 0 0 0 3px var(--overlay-medium);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1);
 }
 
 .form-group-modern textarea {
@@ -1270,8 +1192,8 @@ button {
 
 .btn-send-message:hover {
     background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
 /* ========================================

@@ -106,7 +106,7 @@ const navbarNav = document.querySelector('.navbar-nav');
 
 function getScrollOffset() {
     const navbar = document.querySelector('.top-navbar');
-    const buffer = 20;
+    const buffer = 10;
     return (navbar ? navbar.offsetHeight : 0) + buffer;
 }
 
