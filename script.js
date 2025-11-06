@@ -104,13 +104,21 @@ const sidebar = document.querySelector('.sidebar');
 const sidebarClose = document.querySelector('.sidebar-close');
 const navbarNav = document.querySelector('.navbar-nav');
 
+function getScrollOffset() {
+    const navbar = document.querySelector('.top-navbar');
+    const buffer = 20;
+    return (navbar ? navbar.offsetHeight : 0) + buffer;
+}
+
 if (mobileMenuToggle) {
     mobileMenuToggle.addEventListener('click', (e) => {
         e.stopPropagation();
         
         // Toggle mobile menu
         if (window.innerWidth <= 992) {
-            navbarNav.classList.toggle('active');
+            if (navbarNav) {
+                navbarNav.classList.toggle('active');
+            }
             sidebar.classList.toggle('active');
         } else {
             sidebar.classList.toggle('active');
@@ -118,12 +126,15 @@ if (mobileMenuToggle) {
         
         // Change icon
         const icon = mobileMenuToggle.querySelector('i');
-        if (navbarNav.classList.contains('active') || sidebar.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+        if (icon) {
+            const menuActive = (navbarNav && navbarNav.classList.contains('active')) || sidebar.classList.contains('active');
+            if (menuActive) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         }
     });
 }
@@ -131,12 +142,16 @@ if (mobileMenuToggle) {
 // Close sidebar with X button
 if (sidebarClose) {
     sidebarClose.addEventListener('click', () => {
-        sidebar.classList.remove('active');
+        if (sidebar) {
+            sidebar.classList.remove('active');
+        }
         
-        const icon = mobileMenuToggle.querySelector('i');
-        if (icon) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+        if (mobileMenuToggle) {
+            const icon = mobileMenuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         }
     });
 }
@@ -145,11 +160,15 @@ if (sidebarClose) {
 document.addEventListener('click', (e) => {
     if (window.innerWidth <= 992) {
         const navbar = document.querySelector('.top-navbar');
-        if (!navbar.contains(e.target) && navbarNav.classList.contains('active')) {
+        if (navbar && navbarNav && !navbar.contains(e.target) && navbarNav.classList.contains('active')) {
             navbarNav.classList.remove('active');
-            const icon = mobileMenuToggle.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            if (mobileMenuToggle) {
+                const icon = mobileMenuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         }
     }
 });
@@ -165,11 +184,11 @@ function updateActiveNavOnScroll() {
     let currentSection = '';
     
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const scrollPosition = window.scrollY + window.innerHeight / 3;
+        const sectionTop = section.offsetTop - getScrollOffset();
+        const sectionBottom = sectionTop + section.offsetHeight;
+        const scrollPosition = window.scrollY;
         
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
             currentSection = section.getAttribute('id');
         }
     });
@@ -203,7 +222,7 @@ window.addEventListener('scroll', debouncedScrollHandler);
 // Smooth Scroll for Navigation Links
 // ========================================
 
-document.querySelectorAll('.nav-item').forEach(link => {
+document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
         
@@ -214,20 +233,27 @@ document.querySelectorAll('.nav-item').forEach(link => {
             // Close mobile menu if open
             if (window.innerWidth <= 992 && sidebar.classList.contains('active')) {
                 sidebar.classList.remove('active');
-                const icon = mobileMenuToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                if (navbarNav) {
+                    navbarNav.classList.remove('active');
+                }
+                if (mobileMenuToggle) {
+                    const icon = mobileMenuToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                }
             }
             
             // Smooth scroll to section
-            const offsetTop = targetSection.offsetTop;
+            const offsetTop = targetSection.getBoundingClientRect().top + window.scrollY - getScrollOffset();
             window.scrollTo({
-                top: offsetTop,
+                top: Math.max(offsetTop, 0),
                 behavior: 'smooth'
             });
             
             // Update active nav immediately
-            document.querySelectorAll('.nav-item').forEach(item => {
+            document.querySelectorAll('.nav-link').forEach(item => {
                 item.classList.remove('active');
             });
             this.classList.add('active');
@@ -275,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Form Validation Enhancement
 // ========================================
 
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.querySelector('.contact-form-modern');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         const name = document.getElementById('name').value.trim();
@@ -329,11 +355,18 @@ window.addEventListener('resize', debounce(() => {
     
     // If transitioning from mobile to desktop
     if (windowWidth <= 992 && currentWidth > 992) {
-        sidebar.classList.remove('active');
-        const icon = mobileMenuToggle.querySelector('i');
-        if (icon) {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+        if (sidebar) {
+            sidebar.classList.remove('active');
+        }
+        if (navbarNav) {
+            navbarNav.classList.remove('active');
+        }
+        if (mobileMenuToggle) {
+            const icon = mobileMenuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         }
     }
     
