@@ -1,53 +1,123 @@
-# 🚀 Mueez Mejbah - Portfolio Website# Mueez Mejbah — Personal Portfolio
+# 🌟 Mueez Mejbah - Portfolio Website# 🌟 Mueez Mejbah - Portfolio Website
 
 
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://mueez21.github.io)A modern, professional personal portfolio website featuring a **Dark Mode Neon Theme** with cyan/teal/green accents. Built with vanilla HTML, CSS, and JavaScript to showcase projects, skills, education, research, and experience.
+[![Live Website](https://img.shields.io/badge/Live-Website-10b981?style=for-the-badge)](https://mueez21.github.io)[![Live Website](https://img.shields.io/badge/Live-Website-10b981?style=for-the-badge)](https://mueez21.github.io)
+
+[![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-181717?style=for-the-badge&logo=github)](https://pages.github.com/)
+
+Professional portfolio showcasing my academic journey, projects, and research in Electronics & Telecommunication Engineering at CUET.
+
+Professional portfolio website showcasing my academic journey, projects, and research in Electronics & Telecommunication Engineering at CUET.
+
+## 👨‍🎓 About
+
+## 👨‍🎓 About
+
+3rd year BSc student specializing in:
+
+- 🔬 Deep learning & satellite image classificationI'm a 3rd year BSc student in Electronics & Telecommunication Engineering at Chittagong University of Engineering & Technology (CUET). This portfolio highlights my:
+
+- 💻 Full-stack web development
+
+- 🏆 IEEE APS Vice-Chair- 🔬 **Research Work** - Satellite image classification using deep learning
+
+- 📚 Machine learning research- 💻 **Projects** - Full-stack web applications and ML implementations
+
+- 🏆 **Experience** - IEEE APS Vice-Chair & technical leadership
+
+## 🚀 Features- 📚 **Education** - Academic achievements and certifications
 
 
 
-Modern, responsive portfolio showcasing projects, research, and experience in Electronics & Telecommunication Engineering at CUET.
+- 🌓 Dark/Light mode toggle## 🚀 Features
 
+- 📱 Fully responsive
 
-## ✨ Features## 🎨 Design Theme
+- 🎨 Modern UI with animations- 🌓 **Dark/Light Mode** - Toggle themes with persistent preference
 
+- ⚡ Single-page smooth scrolling- 📱 **Fully Responsive** - Optimized for mobile, tablet, desktop
 
+- 🎨 **Professional Design** - Clean, modern UI with smooth animations
 
-- 🌓 **Dark/Light Mode** - Toggle themes with persistent preference- **Dark Mode Neon**: Deep dark background (#07070a) with vibrant neon cyan, teal, and green accents
-
-- 📱 **Fully Responsive** - Optimized for mobile, tablet, desktop- **Glass-morphism**: Semi-transparent cards with backdrop blur effects
-
-- 🎨 **Modern UI/UX** - Clean design with smooth animations- **Smooth Animations**: Scroll-based reveal animations and hover effects
-
-- 🔝 **Scroll to Top** - Quick navigation button- **Modern Typography**: Poppins font family for clean, professional look
+## 🛠️ Tech Stack- 🔝 **Scroll to Top** - Quick navigation button
 
 - ⚡ **Single Page** - Smooth scrolling experience
 
-## ✨ Features
+HTML5 • CSS3 • JavaScript • Font Awesome • Google Fonts • GitHub Pages- 🎯 **SEO Optimized** - Better visibility on search engines
 
-## 🛠️ Tech Stack
 
-### � Single-Page Portfolio
 
-HTML5 • CSS3 • JavaScript • Font Awesome • Google Fonts- **Hero Section**: Eye-catching introduction with animated neon text effects
+## 🎨 Sections## 🛠️ Technologies Used
 
-- **About**: Personal background and career summary
 
-## 📂 Sections- **Education**: Academic timeline with institutions and achievements
 
-- **Skills**: Animated skill cards showcasing technical expertise
+**Home** • **About** • **Education & Skills** • **Projects** • **Research** • **Experience** • **Contact**- **HTML5** - Semantic markup
 
-Home • About • Education & Skills • Projects • Research • Experience • Contact- **Projects**: Portfolio with detailed modal popups for each project
+- **CSS3** - Modern styling with CSS variables
 
-- **Research**: Dedicated section for academic research and publications
+## 🌐 Live- **JavaScript** - Interactive features and theme switching
 
-## 📄 License- **Experience**: Professional and volunteer work history
+- **Font Awesome** - Professional icons
 
-- **Contact**: Working contact form with validation and mailto integration
+Visit: **[mueez21.github.io](https://mueez21.github.io)**- **Google Fonts** - Poppins typography
 
-© 2025 Mueez Mejbah. All rights reserved.
+- **GitHub Pages** - Hosting and deployment
 
-### 📋 Resume Page
+## 📫 Connect
+
+## 📂 Project Structure
+
+- 📧 [mueezmejbah284@gmail.com](mailto:mueezmejbah284@gmail.com)
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/mueez-mejbah-214807306/)```
+
+- 💻 [GitHub](https://github.com/Mueez21)├── index.html          # Main portfolio page
+
+├── resume.html         # Academic CV page
+
+---├── styles.css          # All styling and themes
+
+├── script.js           # Interactive functionality
+
+⭐ **Star this repo if you find it helpful!**└── README.md           # This file
+
+```
+
+*© 2025 Mueez Mejbah*
+
+## 🎨 Color Scheme
+
+### Light Theme
+- Primary: `#10b981` (Emerald Green)
+- Accent: `#0891b2` (Cyan)
+- Background: Soft greenish tints for cohesive branding
+
+### Dark Theme
+- Primary: `#34d399` (Light Green)
+- Accent: `#06b6d4` (Bright Cyan)
+- Background: Dark slate with subtle contrasts
+
+## � Sections
+
+- **Home** - Eye-catching hero section with introduction
+- **About** - Personal background and career summary
+- **Education & Skills** - Academic timeline and technical expertise
+- **Projects** - Featured work with live demos and source code
+- **Research** - Academic research and publications
+- **Experience** - Professional and volunteer positions
+- **Contact** - Working contact form with validation
+
+## 🌐 Visit My Portfolio
+
+**Live Website:** [https://mueez21.github.io](https://mueez21.github.io)
+
+## 📫 Connect With Me
+
+- **Email:** [mueezmejbah284@gmail.com](mailto:mueezmejbah284@gmail.com)
+- **LinkedIn:** [Mueez Mejbah](https://www.linkedin.com/in/mueez-mejbah-214807306/)
+- **GitHub:** [@Mueez21](https://github.com/Mueez21)
+- **Location:** Agrabad, Chattogram, Bangladesh
 
 ## 📞 Contact- Print-optimized resume layout (A4 size)
 
@@ -240,46 +310,14 @@ Edit CSS variables in `styles.css`:
 - 💻 GitHub: [github.com/Mueez21](https://github.com/Mueez21)
 - 📍 Location: Agrabad, Chattogram, Bangladesh
 
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your own portfolio! If you find any bugs or have suggestions, please open an issue.
-
 ## 📝 License
 
-This project is licensed under the **MIT License** - feel free to use this template for your personal portfolio.
-
-```
-MIT License
-
-Copyright (c) 2025 Mueez Mejbah
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-## 🌟 Acknowledgments
-
-- Font Awesome for icons
-- Google Fonts for Poppins typography
-- Inspiration from modern portfolio designs
+This project is open source and available for educational purposes.
 
 ---
 
 **⭐ If you found this helpful, please star the repository!**
 
 Made with ❤️ and passion for technology by Mueez Mejbah
+
+*Last Updated: November 2025*
